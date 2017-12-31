@@ -17,7 +17,7 @@ public class Demo{
 	private native void init(byte[] data);
 	public static void main(String[] args){
 		Demo d=new Demo();
-		try(InputStream inputstream = new FileInputStream("test.txt")){
+		try(InputStream inputstream = new FileInputStream("tensorflow_inception_graph.pb")){
 			System.out.println("Start to load model...");
 			long startTime = System.currentTimeMillis();
 			byte[] data = d.load(inputstream);
